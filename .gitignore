@@ -1,0 +1,17 @@
+# Archivos sensibles
+.env
+*.key
+*.pem
+
+# Archivos temporales
+*.log
+*.bak
+*.tmp
+
+# Config locales de editores
+.vscode/
+.idea/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
