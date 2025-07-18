@@ -4,15 +4,36 @@ body {
   padding: 0;
 }
 
-h1 {
-  color: #2c3e50;
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
-  margin-top: 20px;
 }
 
-footer {
-  text-align: center;
-  margin-top: 50px;
-  color: #777;
-  font-size: 0.9rem;
+nav a {
+  margin: 0 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
 }
