@@ -2,6 +2,8 @@
 .env
 *.key
 *.pem
+*.crt
+*.csr
 
 # Archivos temporales
 *.log
