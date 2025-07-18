@@ -1,0 +1,35 @@
+/* Transiciones suaves para botones e inputs */
+button,
+input,
+textarea {
+  transition: all 0.3s ease;
+}
+
+/* Hover sobre el botón */
+button:hover {
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+}
+
+/* Inputs al enfocar */
+input:focus,
+textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 119, 204, 0.5);
+}
+
+/* Encabezado animado al aparecer */
+h1 {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
