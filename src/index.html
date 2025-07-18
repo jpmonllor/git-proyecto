@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi sitio con Git</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <main>
-      <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Mi Landing Page</h1>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
 
-      <section id="formulario-contacto">
-        <h2>Formulario de Contacto</h2>
-        <form action="#" method="post">
-          <label for="nombre">Nombre:</label><br />
-          <input type="text" id="nombre" name="nombre" required /><br />
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+      <p>Esta es una landing page responsive con Git y CSS.</p>
+    </section>
 
-          <label for="email">Email:</label><br />
-          <input type="email" id="email" name="email" required /><br />
+    <section id="servicios">
+      <h2>Servicios</h2>
+      <ul>
+        <li>Desarrollo Web</li>
+        <li>Diseño UI/UX</li>
+        <li>Automatización DevOps</li>
+      </ul>
+    </section>
 
-          <label for="mensaje">Mensaje:</label><br />
-          <textarea id="mensaje" name="mensaje" required></textarea><br />
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>contacto@misitio.com</p>
+    </section>
+  </main>
 
-          <input type="submit" value="Enviar" />
-        </form>
-      </section>
-
-      <footer>
-        <p>&copy; 2025 Mi Sitio Web</p>
-      </footer>
-    </main>
-  </body>
+  <footer>
+    <p>&copy; 2025 Mi Sitio Web</p>
+  </footer>
+</body>
 </html>
