@@ -14,7 +14,7 @@
     <div class="contenedor-principal">
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
-      <button id="tema-boton"><span class="emoji">í ¼í¼™</span> <span class="texto">Modo oscuro</span></button>
+      <button id="tema-boton">í ¼í¼™ Modo oscuro</button>
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
@@ -41,27 +41,23 @@
   </main>
 
   <script>
-    // Mensaje de confirmaciÃ³n
+    // Mensaje de agradecimiento sin errores de codificaciÃ³n
     document.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Â¡Gracias por tu mensaje!');
+      alert("Â¡Gracias por tu mensaje! í ½í¸Š");
       this.reset();
     });
 
-    // Cambio de tema con emojis bien estructurados
-    const botonTema = document.getElementById('tema-boton');
-    const emojiSpan = botonTema.querySelector('.emoji');
-    const textoSpan = botonTema.querySelector('.texto');
+    // BotÃ³n de cambio de tema con emojis visibles correctamente
+    const botonTema = document.getElementById("tema-boton");
 
-    botonTema.addEventListener('click', () => {
-      document.body.classList.toggle('oscuro');
+    botonTema.addEventListener("click", () => {
+      document.body.classList.toggle("oscuro");
 
-      if (document.body.classList.contains('oscuro')) {
-        emojiSpan.textContent = 'í ¼í¼ž';
-        textoSpan.textContent = 'Modo claro';
+      if (document.body.classList.contains("oscuro")) {
+        botonTema.textContent = "í ¼í¼ž Modo claro";
       } else {
-        emojiSpan.textContent = 'í ¼í¼™';
-        textoSpan.textContent = 'Modo oscuro';
+        botonTema.textContent = "í ¼í¼™ Modo oscuro";
       }
     });
   </script>
