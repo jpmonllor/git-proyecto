@@ -6,25 +6,21 @@
   <title>Mi sitio con Git</title>
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
   <main>
     <div class="contenedor-principal">
 
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
-      <button id="toggle-tema">
-        <span id="icono-tema">&#127769;</span> <!-- í ¼í¼™ -->
-        <span id="texto-tema">Modo oscuro</span>
-      </button>
+      <button id="tema-boton">í ¼í¼™ Modo oscuro</button>
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
         <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_captcha" value="false">
 
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
           <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
@@ -47,27 +43,21 @@
   </main>
 
   <script>
-    // Alerta de confirmaciÃ³n al enviar formulario
+    // Mensaje de confirmaciÃ³n (sin caracteres especiales incompatibles)
     document.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Â¡Gracias por tu mensaje! í ½í¸Š');
+      alert('Â¡Gracias por tu mensaje!');
       this.reset();
     });
 
-    // Tema claro/oscuro
-    const botonTema = document.getElementById('toggle-tema');
-    const iconoTema = document.getElementById('icono-tema');
-    const textoTema = document.getElementById('texto-tema');
-
+    // Cambiar tema
+    const botonTema = document.getElementById('tema-boton');
     botonTema.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-
-      if (document.body.classList.contains('dark-mode')) {
-        iconoTema.innerHTML = '&#127774;'; // í ¼í¼ž
-        textoTema.textContent = 'Modo claro';
+      document.body.classList.toggle('oscuro');
+      if (document.body.classList.contains('oscuro')) {
+        botonTema.textContent = 'í ¼í¼ž Modo claro';
       } else {
-        iconoTema.innerHTML = '&#127769;'; // í ¼í¼™
-        textoTema.textContent = 'Modo oscuro';
+        botonTema.textContent = 'í ¼í¼™ Modo oscuro';
       }
     });
   </script>
