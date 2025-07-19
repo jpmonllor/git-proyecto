@@ -1,9 +1,10 @@
 /* Estilos generales */
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  margin: 2rem;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
   color: #333;
+  padding: 0;
 }
 
 /* Contenedor principal */
