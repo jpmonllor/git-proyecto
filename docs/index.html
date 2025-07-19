@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi sitio con Git</title>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 
@@ -16,22 +16,24 @@
 
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
-      <!-- Bot√≥n para cambiar tema -->
-      <button id="toggle-theme">Ì†ºÌºô Cambiar tema</button>
+      <button id="toggle-tema">
+        <span id="icono-tema">&#127769;</span> <!-- Ì†ºÌºô -->
+        <span id="texto-tema">Modo oscuro</span>
+      </button>
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
         <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_captcha" value="false" />
 
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
 
           <label for="email"><i class="fas fa-envelope"></i> Email:</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" /><br />
 
           <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aqu√≠..."></textarea>
+          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aqu√≠..."></textarea><br />
 
           <input type="submit" value="Enviar" />
         </form>
@@ -44,19 +46,29 @@
     </div>
   </main>
 
-  <!-- Scripts -->
   <script>
-    // Alerta tras env√≠o del formulario
+    // Alerta de confirmaci√≥n al enviar formulario
     document.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
       alert('¬°Gracias por tu mensaje! Ì†ΩÌ∏ä');
       this.reset();
     });
 
-    // Alternar modo oscuro/claro
-    document.getElementById('toggle-theme').addEventListener('click', function () {
+    // Tema claro/oscuro
+    const botonTema = document.getElementById('toggle-tema');
+    const iconoTema = document.getElementById('icono-tema');
+    const textoTema = document.getElementById('texto-tema');
+
+    botonTema.addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
-      this.textContent = document.body.classList.contains('dark-mode') ? '‚òÄÔ∏è Modo claro' : 'Ì†ºÌºô Cambiar tema';
+
+      if (document.body.classList.contains('dark-mode')) {
+        iconoTema.innerHTML = '&#127774;'; // Ì†ºÌºû
+        textoTema.textContent = 'Modo claro';
+      } else {
+        iconoTema.innerHTML = '&#127769;'; // Ì†ºÌºô
+        textoTema.textContent = 'Modo oscuro';
+      }
     });
   </script>
 </body>
