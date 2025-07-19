@@ -16,19 +16,22 @@
 
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
+      <!-- Bot√≥n para cambiar tema -->
+      <button id="toggle-theme">Ì†ºÌºô Cambiar tema</button>
+
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
-        <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST" onsubmit="alert('¬°Gracias por tu mensaje! Ì†ΩÌ∏ä')">
+        <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST">
           <input type="hidden" name="_captcha" value="false">
 
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
 
           <label for="email"><i class="fas fa-envelope"></i> Email:</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com" /><br />
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
 
           <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aqu√≠..."></textarea><br />
+          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aqu√≠..."></textarea>
 
           <input type="submit" value="Enviar" />
         </form>
@@ -40,5 +43,21 @@
 
     </div>
   </main>
+
+  <!-- Scripts -->
+  <script>
+    // Alerta tras env√≠o del formulario
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('¬°Gracias por tu mensaje! Ì†ΩÌ∏ä');
+      this.reset();
+    });
+
+    // Alternar modo oscuro/claro
+    document.getElementById('toggle-theme').addEventListener('click', function () {
+      document.body.classList.toggle('dark-mode');
+      this.textContent = document.body.classList.contains('dark-mode') ? '‚òÄÔ∏è Modo claro' : 'Ì†ºÌºô Cambiar tema';
+    });
+  </script>
 </body>
 </html>
