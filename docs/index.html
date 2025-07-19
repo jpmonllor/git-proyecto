@@ -31,7 +31,8 @@
           <span id="mensaje-validacion-nombre" class="mensaje-validacion"></span><br />
 
           <label for="email"><i class="fas fa-envelope"></i> Email:</label>
-          <input type="email" id="email" name="email" required placeholder="tu@email.com" /><br />
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+          <span id="mensaje-validacion-email" class="mensaje-validacion"></span><br />
 
           <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
           <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea><br />
@@ -54,6 +55,7 @@
       alert('¡Gracias por tu mensaje!');
       this.reset();
       document.getElementById('mensaje-validacion-nombre').textContent = '';
+      document.getElementById('mensaje-validacion-email').textContent = '';
     });
 
     // Tema claro/oscuro
@@ -73,13 +75,12 @@
       }
     });
 
-    // Validación personalizada del campo nombre
+    // Validación personalizada: NOMBRE
     const inputNombre = document.getElementById("nombre");
     const mensajeNombre = document.getElementById("mensaje-validacion-nombre");
 
     inputNombre.addEventListener("input", function () {
       const valor = this.value.trim();
-
       if (valor.length < 3) {
         mensajeNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
         mensajeNombre.style.color = "red";
@@ -89,6 +90,22 @@
       } else {
         mensajeNombre.textContent = "✅ Nombre válido";
         mensajeNombre.style.color = "green";
+      }
+    });
+
+    // Validación personalizada: EMAIL
+    const inputEmail = document.getElementById("email");
+    const mensajeEmail = document.getElementById("mensaje-validacion-email");
+
+    inputEmail.addEventListener("input", function () {
+      const valor = this.value.trim();
+      const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!regexEmail.test(valor)) {
+        mensajeEmail.textContent = "Formato de correo no válido.";
+        mensajeEmail.style.color = "red";
+      } else {
+        mensajeEmail.textContent = "✅ Email válido";
+        mensajeEmail.style.color = "green";
       }
     });
   </script>
