@@ -4,23 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mi sitio con Git</title>
-  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="icon" type="image/x-icon" href="favicon.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <main>
     <div class="contenedor-principal">
-
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
-      <button id="tema-boton">í ¼í¼™ Modo oscuro</button>
+      <button id="tema-boton"><span class="emoji">í ¼í¼™</span> <span class="texto">Modo oscuro</span></button>
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
         <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST">
-          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_captcha" value="false" />
 
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
           <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
@@ -38,26 +37,31 @@
       <footer>
         <p>&copy; 2025 Mi sitio web by JPM</p>
       </footer>
-
     </div>
   </main>
 
   <script>
-    // Mensaje de confirmaciÃ³n (sin caracteres especiales incompatibles)
+    // Mensaje de confirmaciÃ³n
     document.querySelector('form').addEventListener('submit', function (e) {
       e.preventDefault();
       alert('Â¡Gracias por tu mensaje!');
       this.reset();
     });
 
-    // Cambiar tema
+    // Cambio de tema con emojis bien estructurados
     const botonTema = document.getElementById('tema-boton');
+    const emojiSpan = botonTema.querySelector('.emoji');
+    const textoSpan = botonTema.querySelector('.texto');
+
     botonTema.addEventListener('click', () => {
       document.body.classList.toggle('oscuro');
+
       if (document.body.classList.contains('oscuro')) {
-        botonTema.textContent = 'í ¼í¼ž Modo claro';
+        emojiSpan.textContent = 'í ¼í¼ž';
+        textoSpan.textContent = 'Modo claro';
       } else {
-        botonTema.textContent = 'í ¼í¼™ Modo oscuro';
+        emojiSpan.textContent = 'í ¼í¼™';
+        textoSpan.textContent = 'Modo oscuro';
       }
     });
   </script>
