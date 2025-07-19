@@ -103,5 +103,9 @@ footer {
   animation: fadeIn 2s ease forwards;
 }
 
-
+/* Centrado del título, subtítulo y pie de página */
+.titulo-principal,
+#formulario-contacto h2,
+footer p {
+  text-align: center;
 }
