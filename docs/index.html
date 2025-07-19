@@ -18,7 +18,7 @@
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
-        <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST">
+        <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST" onsubmit="alert('Â¡Gracias por tu mensaje! í ½í¸Š')">
           <input type="hidden" name="_captcha" value="false">
 
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
@@ -40,13 +40,5 @@
 
     </div>
   </main>
-
-  <script>
-    document.querySelector('form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      alert('Â¡Gracias por tu mensaje! í ½í¸Š');
-      this.reset();
-    });
-  </script>
 </body>
 </html>
