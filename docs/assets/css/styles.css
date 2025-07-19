@@ -170,3 +170,9 @@ body.dark-mode button:hover,
 body.dark-mode input[type="submit"]:hover {
   background-color: #555;
 }
+
+.mensaje-validacion {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  display: block;
+}
