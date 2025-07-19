@@ -23,15 +23,12 @@
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
-        <form action="https://formsubmit.co/your@email.com" method="POST"> <!-- Este formulario estÃ¡ desactivado. Reemplazar "your@email.com" por un correo real para que funcione. -->
+        <form action="https://formsubmit.co/your@email.com" method="POST">
           <input type="hidden" name="_captcha" value="false" />
 
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
           <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" />
           <span id="mensaje-validacion-nombre" class="mensaje-validacion"></span><br />
-
-          <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
 
           <label for="email"><i class="fas fa-envelope"></i> Email:</label>
           <input type="email" id="email" name="email" required placeholder="tu@email.com" /><br />
@@ -56,6 +53,7 @@
       e.preventDefault();
       alert('Â¡Gracias por tu mensaje!');
       this.reset();
+      document.getElementById('mensaje-validacion-nombre').textContent = '';
     });
 
     // Tema claro/oscuro
@@ -72,6 +70,25 @@
       } else {
         iconoTema.innerHTML = '&#127769;'; // í ¼í¼™
         textoTema.textContent = 'Modo oscuro';
+      }
+    });
+
+    // ValidaciÃ³n personalizada del campo nombre
+    const inputNombre = document.getElementById("nombre");
+    const mensajeNombre = document.getElementById("mensaje-validacion-nombre");
+
+    inputNombre.addEventListener("input", function () {
+      const valor = this.value.trim();
+
+      if (valor.length < 3) {
+        mensajeNombre.textContent = "El nombre debe tener al menos 3 caracteres.";
+        mensajeNombre.style.color = "red";
+      } else if (/\d/.test(valor)) {
+        mensajeNombre.textContent = "El nombre no debe contener nÃºmeros.";
+        mensajeNombre.style.color = "red";
+      } else {
+        mensajeNombre.textContent = "âœ… Nombre vÃ¡lido";
+        mensajeNombre.style.color = "green";
       }
     });
   </script>
