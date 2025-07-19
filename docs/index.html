@@ -13,6 +13,7 @@
 <body>
   <main>
     <div class="contenedor-principal">
+
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
       <section id="formulario-contacto">
@@ -36,7 +37,16 @@
       <footer>
         <p>&copy; 2025 Mi sitio web by JPM</p>
       </footer>
+
     </div>
   </main>
+
+  <script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Â¡Gracias por tu mensaje! í ½í¸Š');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
