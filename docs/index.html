@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <link rel="icon" type="image/x-icon" href="favicon.png">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi sitio con Git</title>
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  </head>
+<head>
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi sitio con Git</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
 
-  <body>
-    <main>
+<body>
+  <main>
+    <div class="contenedor-principal">
       <h1 class="titulo-principal">Bienvenido a mi sitio con Git</h1>
 
       <section id="formulario-contacto">
         <h2>Formulario de Contacto</h2>
         <form action="https://formsubmit.co/jpmonllor@gmail.com" method="POST">
-	  <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_captcha" value="false">
+
           <label for="nombre"><i class="fas fa-user"></i> Nombre:</label>
-	  <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
-          
-	  <label for="email"><i class="fas fa-envelope"></i> Email:</label>
-	  <input type="email" id="email" name="email" required placeholder="tu@email.com" /><br />
+          <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" /><br />
+
+          <label for="email"><i class="fas fa-envelope"></i> Email:</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com" /><br />
 
           <label for="mensaje"><i class="fas fa-comment"></i> Mensaje:</label>
-	  <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea><br />
+          <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..."></textarea><br />
 
           <input type="submit" value="Enviar" />
         </form>
       </section>
 
       <footer>
-        <p>&copy; 2025 Mi Sitio Web by JPM</p>
+        <p>&copy; 2025 Mi sitio web by JPM</p>
       </footer>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
 </html>
